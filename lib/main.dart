@@ -153,22 +153,25 @@ class MyAppState extends State<MyApp> {
       //         ))
       //   ],
       // ),
-      body: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text("Add User"),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.email),
-              title: Text("add Email"),
-              onTap: () {},
-            )
-          ],
-        ),
-      ),
+      // body: Drawer(
+      //   child: ListView(
+      //     children: [
+      //       ListTile(
+      //         leading: Icon(Icons.person),
+      //         title: Text("Add User"),
+      //         onTap: () {},
+      //       ),
+      //       ListTile(
+      //         leading: Icon(Icons.email),
+      //         title: Text("add Email"),
+      //         onTap: () {},
+      //       )
+      //     ],
+      //   ),
+      // ),
+    body: Row(children:[
+      FloatingActionButton(onPressed: null,child:Text("HEllo"))
+    ]),
     ));
   }
 }
