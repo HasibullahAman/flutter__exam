@@ -170,14 +170,26 @@ class MyAppState extends State<MyApp> {
       //     ],
       //   ),
       // ),
-    // body: Row(children:[
-    //   FloatingActionButton(onPressed: null,child:Text("HEllo"))
-    // ]),
-    body: ButtonBar(alignment:MainAxisAlignment.center,
-    children: [
-      FloatingActionButton(onPressed:   null,child: Text("Hi"),)
-      FloatingActionButton(onPressed: null,child: Text("How"),)
-    ],),
+      // body: Row(children:[
+      //   FloatingActionButton(onPressed: null,child:Text("HEllo"))
+      // ]),
+      // body: ButtonBar(alignment:MainAxisAlignment.center,
+      // children: [
+      //   FloatingActionButton(onPressed:   null,child: Text("Hi"),)
+      //   FloatingActionButton(onPressed: null,child: Text("How"),)
+      // ],),
+      body: AlertDialog(
+        content: Text("How do you want to Love me???"),
+        title: Text("Do you have Mony?"),
+        actions: [
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context, "Yes");
+              },
+              child: Text("Yes")),
+          ElevatedButton(onPressed: (){}, child: Text("No"))
+        ],
+      ),
     ));
   }
 }
