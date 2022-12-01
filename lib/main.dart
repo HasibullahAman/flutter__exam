@@ -114,5 +114,45 @@
 //   }
 // }
 
+import 'dart:html';
 
+import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  State<MyApp> createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  int ind = 0;
+  var mylist = [1, 2, 3, 4, 5, 6, 7];
+
+  void testFunc() {
+    setState(() {
+      ind++;
+      print(ind);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(title: Text("Hello")),
+      body: ListView(
+        children: [
+          ElevatedButton(
+              onPressed: testFunc,
+              child: Icon(
+                Icons.add,
+                color: Colors.teal,
+                size: 40,
+              ))
+        ],
+      ),
+    ));
+  }
+}
