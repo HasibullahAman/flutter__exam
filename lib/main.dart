@@ -142,16 +142,32 @@ class MyAppState extends State<MyApp> {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(title: Text("Hello")),
-      body: ListView(
-        children: [
-          ElevatedButton(
-              onPressed: testFunc,
-              child: Icon(
-                Icons.add,
-                color: Colors.teal,
-                size: 40,
-              ))
-        ],
+      // body:ListView(
+      //   children: [
+      //     ElevatedButton(
+      //         onPressed: testFunc,
+      //         child: Icon(
+      //           Icons.add,
+      //           color: Colors.teal,
+      //           size: 40,
+      //         ))
+      //   ],
+      // ),
+      body: Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Add User"),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.email),
+              title: Text("add Email"),
+              onTap: () {},
+            )
+          ],
+        ),
       ),
     ));
   }
