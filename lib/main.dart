@@ -114,6 +114,7 @@
 //   }
 // }
 
+import 'dart:ffi';
 import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -169,9 +170,14 @@ class MyAppState extends State<MyApp> {
       //     ],
       //   ),
       // ),
-    body: Row(children:[
-      FloatingActionButton(onPressed: null,child:Text("HEllo"))
-    ]),
+    // body: Row(children:[
+    //   FloatingActionButton(onPressed: null,child:Text("HEllo"))
+    // ]),
+    body: ButtonBar(alignment:MainAxisAlignment.center,
+    children: [
+      FloatingActionButton(onPressed:   null,child: Text("Hi"),)
+      FloatingActionButton(onPressed: null,child: Text("How"),)
+    ],),
     ));
   }
 }
